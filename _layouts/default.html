@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+  {% include meta.html %}
+  {% include css.html %}
+</head>
+
+<body>
+  <main>
+    <nav>
+      {% include nav.html %}
+    </nav>
+    <section>
+      <div class="container">
+        {{ content }}
+      </div>
+    </section>
+    <footer class="page-footer">
+      {% include footer.html %}
+    </footer>
+  </main>
+  {% include js.html %}
+</body>
+</html>
