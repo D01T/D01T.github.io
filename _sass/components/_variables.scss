@@ -35,14 +35,14 @@
 // 1. Colors
 // ==========================================================================
 
-$primary-color: color("materialize-red", "lighten-2") !default;
+$primary-color: color("blue", "base") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$secondary-color: color("teal", "lighten-1") !default;
+$secondary-color: color("light-blue", "accent-2") !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
-$link-color: color("light-blue", "darken-1") !default;
+$link-color: color("cyan", "accent-2") !default;
 
 
 // 2. Badges
@@ -243,7 +243,7 @@ $navbar-line-height: $navbar-height !default;
 $navbar-height-mobile: 56px !default;
 $navbar-line-height-mobile: $navbar-height-mobile !default;
 $navbar-font-size: 1rem !default;
-$navbar-font-color: #fff !default;
+$navbar-font-color: rgba(0,0,0,.87) !default;
 $navbar-brand-font-size: 2.1rem !default;
 
 // 15. Side Navigation
@@ -312,7 +312,7 @@ $h6-fontsize: 1rem !default;
 // ==========================================================================
 
 $footer-font-color: #fff !default;
-$footer-bg-color: $primary-color !default;
+$footer-bg-color: color("blue-grey", "darken-2") !default;
 $footer-copyright-font-color: rgba(255,255,255,.8) !default;
 $footer-copyright-bg-color: rgba(51,51,51,.08) !default;
 
