@@ -7,19 +7,21 @@
 </head>
 
 <body>
-  <main>
-    <nav>
+  <header>
+    <nav class="white">
       {% include nav.html %}
     </nav>
+  </header>
+  <main>
     <section>
       <div class="container">
         {{ content }}
       </div>
     </section>
-    <footer class="page-footer">
-      {% include footer.html %}
-    </footer>
   </main>
+  <footer class="page-footer blue">
+    {% include footer.html %}
+  </footer>
   {% include js.html %}
 </body>
 </html>
