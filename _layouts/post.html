@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="row s12">
+  <article>
+    <div class="card">
+      {% if page.image.src %}
+      <div class="card-image">
+        <img class="materialboxed" data-caption="{{ page.image.copyright }}" src="{{ page.image.src }}">
+        <span class="card-title">{{ page.title }}</span>
+      </div>
+      <div class="card-content">
+        <p style="font-weight: 600; margin-bottom: 10px;">{{ page.date | date: "%-d %b %Y" | upcase }}</p>
+        <p>{{ content | replace: "<img", "<img class='materialboxed'" }}</p>
+      </div>
+      {% else %}
+      <div class="card-content">
+        <span class="card-title">{{ page.title }}</span>
+        <p style="font-weight: 600; margin-bottom: 10px;">{{ page.date | date: "%-d %b %Y" | upcase }}</p>
+        <p>{{ content }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </article>
+</div>

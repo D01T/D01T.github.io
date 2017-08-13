@@ -5,3 +5,6 @@ permalink: /posts/:year-:month/:title
 
 kramdown:
   input: GFM
+
+sass:
+  style: compressed

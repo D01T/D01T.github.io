@@ -1,10 +1,19 @@
-<div class="nav-wrapper container">
-  <a href="#!" class="brand-logo center">Do IT</a>
-  <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
-  <ul class="right hide-on-med-and-dow ">
-    <li><a href="index.html">Home</a></li>
+<div class="nav-wrapper container" style="font-family: 'Coda', cursive;">
+  <a class="brand-logo center" href="{{ site.url }}">Do IT</a>
+  <a class="button-collapse" data-activates="mobile-nav" href="#"><i class="material-icons">menu</i></a>
+  <ul class="right hide-on-med-and-down">
+    <li><a href="{{ site.url }}">Home</a></li>
   </ul>
   <ul class="side-nav" id="mobile-nav">
-    <li><a href="index.html">Home</a></li>
+    <li>
+      <div class="user-view">
+        <div class="background" style="background: #607d8b;"></div>
+        <img class="circle materialboxed" src="{{ site.url }}/assets/img/logo.png">
+        <span class="white-text name">Do IT</span></a>
+        <span class="email"></span></a>
+      </div>
+    </li>
+    <li><a class="subheader">Menu</a></li>
+    <li><a href="{{ site.url }}"><i class="material-icons">home</i>Home</a></li>
   </ul>
 </div>
