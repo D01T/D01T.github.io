@@ -7,18 +7,23 @@ layout: default
     <div class="card">
       {% if page.image.src %}
       <div class="card-image">
-        <img class="materialboxed" data-caption="{{ page.image.copyright }}" src="{{ page.image.src }}">
+        <img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}">
         <span class="card-title">{{ page.title }}</span>
       </div>
       <div class="card-content">
-        <p style="font-weight: 600; margin-bottom: 10px;">{{ page.date | date: "%-d %b %Y" | upcase }}</p>
+        <p style="font-weight: 600; margin-bottom: 10px;">{{ page.date | date_to_string }}</p>
         <p>{{ content | replace: "<img", "<img class='materialboxed'" }}</p>
       </div>
       {% else %}
       <div class="card-content">
         <span class="card-title">{{ page.title }}</span>
-        <p style="font-weight: 600; margin-bottom: 10px;">{{ page.date | date: "%-d %b %Y" | upcase }}</p>
+        <p style="font-weight: 600; margin-bottom: 10px;">{{ page.date | date_to_string }}</p>
         <p>{{ content }}</p>
+        <br>
+        <p>Tags:&nbsp;</p>
+        {% for tag in page.tags %}
+          <div class="chip">{{ tag }}</div>
+        {% endfor %}
       </div>
       {% endif %}
     </div>

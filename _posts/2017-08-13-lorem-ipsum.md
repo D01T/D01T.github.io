@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lorem Ipsum"
-date: 2017-08-12 18:00
+tags: lorem, ipsum
 image:
   src: https://unsplash.com/photos/DrLtv2bgXSc/download?force=true
   copyright: Adrian Infernus
