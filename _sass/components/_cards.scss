@@ -114,6 +114,8 @@
 
 
   .card-image {
+    max-height: 240px;
+    overflow: hidden;
     position: relative;
 
     // Image background for content
@@ -156,7 +158,7 @@
       }
     }
 
-    img {
+    p img {
       display: block;
       border-radius: 2px 2px 0 0;
       position: relative;
