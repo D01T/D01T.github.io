@@ -11,7 +11,10 @@ permalink: /archive/
         <span class="card-title">Archive</span>
         <ul class="collection">
         {% for post in site.posts %}
-          <li class="collection-item"><strong>{{ post.date | date: "%Y.%m.%d" }}</strong><br><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+          <li class="collection-item">
+            <strong>{{ post.date | date: "%Y.%m.%d" }} | {{ site.data.members | where: "github", post.author | first | first | last }}</strong><br>
+            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+          </li>
         {% endfor %}
         </ul>
       </div>
