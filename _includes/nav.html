@@ -6,10 +6,15 @@
       <ul class="logo-font right hide-on-med-and-down">
         <li><a href="{{ site.url }}">Home</a></li>
         <li><a href="{{ site.url }}/about/">About</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown-menu">Others<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
     </div>
   </nav>
 </div>
+<ul class="dropdown-content" id="dropdown-menu">
+  <li><a href="{{ site.url }}/archive/">Archive</a></li>
+  <li><a href="{{ site.url }}/categories/">Categories</a></li>
+</ul>
 <ul class="side-nav" id="mobile-nav">
   <li>
     <div class="user-view">
@@ -23,4 +28,5 @@
   <li><a href="{{ site.url }}">Home</a></li>
   <li><a href="{{ site.url }}/about/">About</a></li>
   <li><a href="{{ site.url }}/archive/">Archive</a></li>
+  <li><a href="{{ site.url }}/categories/">Categories</a></li>
 </ul>

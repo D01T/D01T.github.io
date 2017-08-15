@@ -1,7 +1,7 @@
 title: Do IT
 url: https://D01T.github.io
 timezone: Asia/Seoul
-permalink: /blog/:year/:month/:day/:title/
+permalink: pretty
 
 kramdown:
   input: GFM
