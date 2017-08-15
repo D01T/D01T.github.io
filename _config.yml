@@ -3,6 +3,17 @@ url: https://D01T.github.io
 timezone: Asia/Seoul
 permalink: pretty
 
+paginate: 5
+paginate_path: /:num/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
 kramdown:
   input: GFM
 

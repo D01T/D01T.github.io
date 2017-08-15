@@ -4,7 +4,7 @@ permalink: /
 ---
 
 <div class="row s12">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
   <article>
     <div class="card">
       {% if post.image.src %}
@@ -29,4 +29,40 @@ permalink: /
     </div>
   </article>
   {% endfor %}
+
+  <ul class="pagination">
+    {% if paginator.page == 1 %}
+    <li class="disabled"><a href="#!"><i class="material-icons">first_page</i></a></li>
+    {% else %}
+    <li class="waves-effect"><a href="{{ site.url }}"><i class="material-icons">first_page</i></a></li>
+    {% endif %}
+
+    {% if paginator.previous_page %}
+    <li class="waves-effect"><a href="{{ paginator.previous_page_path }}"><i class="material-icons">chevron_left</i></a></li>
+    {% else %}
+    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+      <li class="active"><a href="#!">{{ page }}</a></li>
+      {% elsif page == 1 %}
+      <li class="waves-effect"><a href="{{ site.url }}">{{ page }}</a></li>
+      {% else %}
+      <li class="waves-effect"><a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+    <li class="waves-effect"><a href="{{ paginator.next_page_path }}"><i class="material-icons">chevron_right</i></a></li>
+    {% else %}
+    <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    {% endif %}
+
+    {% if paginator.page == paginator.total_pages %}
+    <li class="waves-effect"><a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}"><i class="material-icons">last_page</i></a></li>
+    {% else %}
+    <li class="disabled"><a href="#!"><i class="material-icons">last_page</i></a></li>
+    {% endif %}
+  </ul>
 </div>
