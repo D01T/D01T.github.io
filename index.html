@@ -30,7 +30,7 @@ permalink: /
   </article>
   {% endfor %}
 
-  <ul class="pagination">
+  <ul class="pagination center">
     {% if paginator.page == 1 %}
     <li class="disabled"><a href="#!"><i class="material-icons">first_page</i></a></li>
     {% else %}
@@ -60,9 +60,9 @@ permalink: /
     {% endif %}
 
     {% if paginator.page == paginator.total_pages %}
-    <li class="waves-effect"><a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}"><i class="material-icons">last_page</i></a></li>
-    {% else %}
     <li class="disabled"><a href="#!"><i class="material-icons">last_page</i></a></li>
+    {% else %}
+    <li class="waves-effect"><a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}"><i class="material-icons">last_page</i></a></li>
     {% endif %}
   </ul>
 </div>

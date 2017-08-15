@@ -4,7 +4,7 @@ timezone: Asia/Seoul
 permalink: pretty
 
 paginate: 5
-paginate_path: /:num/
+paginate_path: /page:num/
 
 defaults:
   -
