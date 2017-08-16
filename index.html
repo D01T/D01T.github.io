@@ -2,66 +2,21 @@
 layout: default
 ---
 
-<div class="row s12">
+<style type="text/css">
+  .navbar-fixed nav {
+    background: rgba(0,0,0,0);
+    box-shadow: none;
+  }
+</style>
+
+<div class="row">
+  <div class="col s12">
   {% for post in paginator.posts %}
-  <article>
-    <div class="card">
-      {% if post.image.src %}
-      <div class="card-image">
-        <img class="materialboxed" data-caption="© {{ post.image.copyright }}" src="{{ post.image.src }}">
-        <span class="card-title">{{ post.title }}</span>
-      </div>
-      <div class="card-content">
-        <p style="font-weight: 600; margin-bottom: 10px;">{{ post.date | date_to_string }} | {{ site.data.members | where: "github", post.author | first | first | last }}</p>
-        <p>{{ post.excerpt | truncate: 100, "…" }}</p>
-      </div>
-      {% else %}
-      <div class="card-content">
-        <span class="card-title">{{ post.title }}</span>
-        <p style="font-weight: 600; margin-bottom: 10px;">{{ post.date | date_to_string }} | {{ site.data.members | where: "github", post.author | first | first | last }}</p>
-        <p>{{ post.excerpt | truncate: 100, "…" }}</p>
-      </div>
-      {% endif %}
-      <div class="card-action">
-        <a class="pink-text text-accent-2" href="{{ post.url }}">More</a>
-      </div>
-    </div>
-  </article>
+    {% include post_card.html %}
   {% endfor %}
+  </div>
 
-  <ul class="pagination center">
-    {% if paginator.page == 1 %}
-    <li class="disabled"><a href="#!"><i class="material-icons">first_page</i></a></li>
-    {% else %}
-    <li class="waves-effect"><a href="{{ site.url }}"><i class="material-icons">first_page</i></a></li>
-    {% endif %}
-
-    {% if paginator.previous_page %}
-    <li class="waves-effect"><a href="{{ paginator.previous_page_path }}"><i class="material-icons">chevron_left</i></a></li>
-    {% else %}
-    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-    {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-      <li class="active"><a href="#!">{{ page }}</a></li>
-      {% elsif page == 1 %}
-      <li class="waves-effect"><a href="{{ site.url }}">{{ page }}</a></li>
-      {% else %}
-      <li class="waves-effect"><a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a></li>
-      {% endif %}
-    {% endfor %}
-
-    {% if paginator.next_page %}
-    <li class="waves-effect"><a href="{{ paginator.next_page_path }}"><i class="material-icons">chevron_right</i></a></li>
-    {% else %}
-    <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-    {% endif %}
-
-    {% if paginator.page == paginator.total_pages %}
-    <li class="disabled"><a href="#!"><i class="material-icons">last_page</i></a></li>
-    {% else %}
-    <li class="waves-effect"><a href="{{ site.paginate_path | replace: ':num', paginator.total_pages }}"><i class="material-icons">last_page</i></a></li>
-    {% endif %}
-  </ul>
+  <div class="col s12">
+    {% include paginate.html %}
+  </div>
 </div>

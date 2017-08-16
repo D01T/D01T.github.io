@@ -1,0 +1,20 @@
+<article>
+  <div class="card">
+    {% if post.image.src %}
+    <div class="card-image">
+      <img class="materialboxed" data-caption="© {{ post.image.copyright }}" src="{{ post.image.src }}">
+      <span class="card-title">{{ post.title }}</span>
+    </div>
+    <div class="card-content" style="cursor: pointer;" onclick="window.location='{{ post.url }}'">
+      <p style="font-weight: 600; margin-bottom: 10px;">{{ post.date | date_to_string }} | {{ site.data.members | where: "github", post.author | first | first | last }}</p>
+      <p>{{ post.excerpt | truncate: 100, "…" }}</p>
+    </div>
+    {% else %}
+    <div class="card-content" style="cursor: pointer;" onclick="window.location='{{ post.url }}'">
+      <span class="card-title">{{ post.title }}</span>
+      <p style="font-weight: 600; margin-bottom: 10px;">{{ post.date | date_to_string }} | {{ site.data.members | where: "github", post.author | first | first | last }}</p>
+      <p>{{ post.excerpt | truncate: 100, "…" }}</p>
+    </div>
+    {% endif %}
+  </div>
+</article>
