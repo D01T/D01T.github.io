@@ -2,12 +2,11 @@
 layout: default
 ---
 
-<style type="text/css">
-  .navbar-fixed nav {
-    background: rgba(0,0,0,0);
-    box-shadow: none;
-  }
-</style>
+<div class="parallax-container" style="height: 300px;">
+  <div class="parallax">
+    <img class="materialboxed" data-caption="© Vincent Guth" src="https://unsplash.com/photos/62V7ntlKgL8/download?force=true">
+  </div>
+</div>
 
 <div class="row">
   <div class="col s12">
@@ -20,3 +19,10 @@ layout: default
     {% include paginate.html %}
   </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.parallax').parallax();
+    $('main').prepend($('.parallax-container'));
+  });
+</script>
