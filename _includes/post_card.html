@@ -1,18 +1,24 @@
+{% capture now_date %}{{ site.time | date: "%s" | minus: 0 }}{% endcapture %}
+{% capture post_date %}{{ post.time | date: "%s" | minus: 0 }}{% endcapture %}
+{% capture delta_date %}{{ now_date | minus: post_date }}{% endcapture %}
+
 <article>
   <div class="card">
     {% if post.image.src %}
     <div class="card-image">
       <img class="materialboxed" data-caption="© {{ post.image.copyright }}" src="{{ post.image.src }}">
-      <span class="card-title">{{ post.title }}</span>
+      <span class="card-title">
+        {{ post.title }}
+        {% if delta_date < 259200 %}
+        <span class="new badge"></span>
+        {% endif %}
+      </span>
     </div>
     {% else %}
     <div class="card-content" style="cursor: pointer;" onclick="window.location='{{ post.url }}'">
       {% unless post.image.src %}
       <span class="card-title">{{ post.title }}</span>
-      {% capture now_date %}{{ site.time | date: %-d | minus: 0 }}{% endcapture %}
-      {% capture post_date %}{{ post.time | date: %-d | minus: 0 }}{% endcapture %}
-      {% capture date %}{{ now_date | minus: post_date }}{% endcapture %}
-      {% if date < 3 %}
+      {% if delta_date < 259200 %}
       <span class="new badge"></span>
       {% endif %}
       {% endunless %}
