@@ -1,5 +1,5 @@
-{% capture now_date %}{{ site.time | date: "%s" | minus: 0 }}{% endcapture %}
-{% capture post_date %}{{ post.time | date: "%s" | minus: 0 }}{% endcapture %}
+{% capture now_date %}{{ site.time | date: "%s" }}{% endcapture %}
+{% capture post_date %}{{ post.time | date: "%s" }}{% endcapture %}
 {% capture delta_date %}{{ now_date | minus: post_date }}{% endcapture %}
 
 <article>
@@ -14,7 +14,7 @@
         {% endif %}
       </span>
     </div>
-    {% else %}
+    {% endif %}
     <div class="card-content" style="cursor: pointer;" onclick="window.location='{{ post.url }}'">
       {% unless post.image.src %}
       <span class="card-title">{{ post.title }}</span>
@@ -25,6 +25,5 @@
       <p style="font-weight: 600; margin-bottom: 10px;">{{ post.date | date_to_string }} | {{ site.data.members | where: "github", post.author | first | first | last }}</p>
       <p>{{ post.excerpt | truncate: 100, "…" }}</p>
     </div>
-    {% endif %}
   </div>
 </article>
