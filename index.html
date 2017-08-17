@@ -2,27 +2,36 @@
 layout: default
 ---
 
-<div class="parallax-container" style="height: 300px;">
+<div class="parallax-container" id="#index-banner">
+  <div class="section no-pad">
+  <div class="valign-wrapper" style="height: 380px;">
+    <div class="container">
+      <h1 class="row center white-text logo-font">DO IT</h1>
+      <div class="row center">
+        <h5 class="col s12 white-text logo-font">The Youth Programming Study Group</h5>
+      </div>
+      <div class="row center">
+        <a class="btn-large waves-effect waves-light white logo-font" href="http://materializecss.com/getting-started.html" style="color: rgba(0,0,0,0.87);">About</a>
+      </div>
+    </div>
+    </div>
+  </div>
   <div class="parallax">
-    <img class="materialboxed" data-caption="© Vincent Guth" src="https://unsplash.com/photos/62V7ntlKgL8/download?force=true">
+    <img src="https://unsplash.com/photos/jqvxcyVx2YE/download?force=true">
   </div>
 </div>
 
-<div class="row">
-  <div class="col s12">
-  {% for post in paginator.posts %}
-    {% include post_card.html %}
-  {% endfor %}
-  </div>
-
-  <div class="col s12">
-    {% include paginate.html %}
+<div class="container">
+  <div class="section">
+    <div class="row">
+      <div class="col s12">
+      {% for post in paginator.posts %}
+        {% include post_card.html %}
+      {% endfor %}
+      </div>
+      <div class="col s12">
+        {% include paginate.html %}
+      </div>
+    </div>
   </div>
 </div>
-
-<script type="text/javascript">
-  $(document).ready(function () {
-    $('.parallax').parallax();
-    $('main').prepend($('.parallax-container'));
-  });
-</script>
