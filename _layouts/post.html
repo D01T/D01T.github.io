@@ -33,16 +33,16 @@ layout: default
         </article>
       </div>
       <div class="col s12">
-        {% if page.previous %}
+        {% if page.next %}
         <div class="left">
-          <a class="btn-floating waves-effect waves-light white" href="{{ page.previous.url }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_back</i></a>
+          <a class="btn-floating waves-effect waves-light white" href="{{ page.next.url }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_back</i></a>
           <span style="color: rgba(0,0,0,.87); margin-left: 16px;">Newer</span>
         </div>
         {% endif %}
-        {% if page.next %}
+        {% if page.previous %}
         <div class="right">
           <span style="color: rgba(0,0,0,.87); margin-right: 16px;">Older</span>
-          <a class="btn-floating waves-effect waves-light white" href="{{ page.next.url }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_forward</i></a>
+          <a class="btn-floating waves-effect waves-light white" href="{{ page.previous.url }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_forward</i></a>
         </div>
         {% endif %}
       </div>

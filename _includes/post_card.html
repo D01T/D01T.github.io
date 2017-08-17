@@ -5,13 +5,17 @@
       <img class="materialboxed" data-caption="© {{ post.image.copyright }}" src="{{ post.image.src }}">
       <span class="card-title">{{ post.title }}</span>
     </div>
-    <div class="card-content" style="cursor: pointer;" onclick="window.location='{{ post.url }}'">
-      <p style="font-weight: 600; margin-bottom: 10px;">{{ post.date | date_to_string }} | {{ site.data.members | where: "github", post.author | first | first | last }}</p>
-      <p>{{ post.excerpt | truncate: 100, "…" }}</p>
-    </div>
     {% else %}
     <div class="card-content" style="cursor: pointer;" onclick="window.location='{{ post.url }}'">
+      {% unless post.image.src %}
       <span class="card-title">{{ post.title }}</span>
+      {% capture now_date %}{{ site.time | date: %-d | minus: 0 }}{% endcapture %}
+      {% capture post_date %}{{ post.time | date: %-d | minus: 0 }}{% endcapture %}
+      {% capture date %}{{ now_date | minus: post_date }}{% endcapture %}
+      {% if date < 3 %}
+      <span class="new badge"></span>
+      {% endif %}
+      {% endunless %}
       <p style="font-weight: 600; margin-bottom: 10px;">{{ post.date | date_to_string }} | {{ site.data.members | where: "github", post.author | first | first | last }}</p>
       <p>{{ post.excerpt | truncate: 100, "…" }}</p>
     </div>
