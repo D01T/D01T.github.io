@@ -32,6 +32,20 @@ layout: default
           </div>
         </article>
       </div>
+      <div class="col s12">
+        {% if page.previous %}
+        <div class="left">
+          <a class="btn-floating waves-effect waves-light white" href="{{ page.previous }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_back</i></a>
+          <span style="color: rgba(0,0,0,.87); margin-left: 16px;">Newer</span>
+        </div>
+        {% endif %}
+        {% if page.next %}
+        <div class="right">
+          <span style="color: rgba(0,0,0,.87); margin-right: 16px;">Older</span>
+          <a class="btn-floating waves-effect waves-light white" href="{{ page.next }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_forward</i></a>
+        </div>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
