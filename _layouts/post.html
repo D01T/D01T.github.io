@@ -33,6 +33,16 @@ layout: default
         </article>
       </div>
       <div class="col s12">
+        <article>
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Comments</span>
+              {% include disqus.html %}
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col s12">
         {% if page.next %}
         <div class="left">
           <a class="btn-floating waves-effect waves-light white" href="{{ page.next.url }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_back</i></a>
