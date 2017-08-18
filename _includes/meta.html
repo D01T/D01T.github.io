@@ -1,13 +1,23 @@
+{% if page.title %}
+{% capture title %}{{ page.title }} | {{ site.title }}{% endcapture %}
+{% else %}
+{% capture title %}{{ site.title }}{% endcapture %}
+{% endif %}
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Blog">
 <meta name="keywords" content="Programming,Blog">
-<meta name="author" content="Do IT">
+<meta name="author" content="{{ title }}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#ffffff">
 <meta name="google" content="notranslate">
-{% if page.title %}
-<title>{{ page.title }} | {{ site.title }}</title>
-{% else %}
-<title>{{ site.title }}</title>
-{% endif %}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="The Programming Study Group">
+<meta name="twitter:image" content="{{ site.url }}/assets/img/logo.png">
+<meta property="og:type" content="blog">
+<meta property="og:url" content="{{ site.url }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="The Programming Study Group">
+<meta property="og:image" content="{{ site.url }}/assets/img/logo.png">
+<title>{{ title }}</title>

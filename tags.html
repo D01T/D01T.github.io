@@ -35,7 +35,7 @@ permalink: /tags/
                   <ul class="collection">
                     {% for post in site.tags[tag_name] %}
                     <li class="collection-item">
-                      <strong>{{ post.date | date: "%Y.%m.%d" }} | {{ site.data.members | where: "github", post.author | first | first | last }}</strong><br>
+                      <strong><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time> | {{ site.data.members | where: "github", post.author | first | first | last }}</strong><br>
                       <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
                     </li>
                     {% endfor %}

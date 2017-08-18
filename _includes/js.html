@@ -2,12 +2,18 @@
 <script type="text/javascript" src="{{ site.url }}/assets/js/materialize.min.js"></script>
 <script type="text/javascript" src="{{ site.url }}/assets/js/prism.min.js"></script>
 <script type="text/javascript">
+  var now = new Date('{{ site.time }}').getTime();
   $(document).ready(function () {
     $('.button-collapse').sideNav();
     $('.collapsible').collapsible();
     $('.dropdown-button').dropdown();
     $('.materialboxed').materialbox();
     $('.parallax').parallax();
+    $('time').each(function () {
+      if (now - (new Date($(this).attr('datetime')).getTime()) < 311040000){
+        $(this).append('<span class="new badge"></span>');
+      }
+    });
   });
 </script>
 <script>

@@ -8,6 +8,7 @@ html {
 }
 
 body {
+  background: color("grey", "lighten-5");
   display: flex;
   min-height: 100vh;
   flex-direction: column;
