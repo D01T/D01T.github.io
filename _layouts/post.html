@@ -11,14 +11,14 @@ layout: default
             {% if page.image.src %}
             <div class="card-image">
               <img class="materialboxed" data-caption="© {{ page.image.copyright }}" src="{{ page.image.src }}">
-              <span class="card-title">{{ page.title }}</span>
+              <span class="card-title truncate">{{ page.title }}</span>
             </div>
             {% endif %}
             <div class="card-content">
               {% unless page.image.src %}
-              <span class="card-title">{{ page.title }}</span>
+              <span class="card-title truncate">{{ page.title }}</span>
               {% endunless %}
-              <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ post.date }}">{{ page.date | date_to_string }}</time></p>
+              <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ post.date }}">{{ page.date | date_to_string }}</time> | <a href="#disqus_thread" data-disqus-identifier="{{ page.id }}"></a></p>
               <p>{{ content | replace: "<img", "<img class='materialboxed'" }}</p>
               <div class="divider" style="margin: 16px 0;"></div>
               <div class="chip">
