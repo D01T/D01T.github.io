@@ -14,8 +14,8 @@
       {% endunless %}
       <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time> | {{ site.data.members | where: "github", post.author | first | first | last }}</p>
       <p>{{ post.excerpt | truncate: 100, "…" }}</p>
-      <div class="right">
-        <i class="material-icons">comment</i>
+      <div class="valign-wrapper" style="margin-top: 16px;">
+        <i class="material-icons" style="color: #9e9e9e;">comment</i>&nbsp;
         <span class="disqus-comment-count" data-disqus-identifier="{{ post.id }}"></span>
       </div>
     </div>
