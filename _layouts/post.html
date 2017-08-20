@@ -18,7 +18,7 @@ layout: default
               {% unless page.image.src %}
               <span class="card-title truncate">{{ page.title }}</span>
               {% endunless %}
-              <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ post.date }}">{{ page.date | date_to_string }}</time> | <a href="#disqus_thread" data-disqus-identifier="{{ page.id }}"></a></p>
+              <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ post.date }}">{{ page.date | date_to_string }}</time> | <a href="{{ site.url }}{{ page.url }}#disqus_thread">Comment</a></p>
               <p>{{ content | replace: "<img", "<img class='materialboxed'" }}</p>
               {% if page.ccl %}
               <div class="center" style="margin-top: 16px;">
@@ -69,3 +69,5 @@ layout: default
     </div>
   </div>
 </div>
+
+<script id="dsq-count-scr" src="//d01t.disqus.com/count.js" async></script>
