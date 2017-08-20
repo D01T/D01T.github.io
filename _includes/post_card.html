@@ -15,9 +15,11 @@
       <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time> | {{ site.data.members | where: "github", post.author | first | first | last }}</p>
       <p>{{ post.excerpt | truncate: 100, "…" }}</p>
       <div class="right">
-        <i class="material-icons md-dark">comment</i>
+        <i class="material-icons">comment</i>
         <span class="disqus-comment-count" data-disqus-identifier="{{ post.id }}"></span>
       </div>
     </div>
   </div>
 </article>
+
+<script id="dsq-count-scr" src="//d01t.disqus.com/count.js" async></script>
