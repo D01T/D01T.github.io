@@ -13,7 +13,7 @@
       <span class="card-title">{{ post.title }}</span>
       {% endunless %}
       <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time> | {{ site.data.members | where: "github", post.author | first | first | last }}</p>
-      <p>{{ post.excerpt | truncate: 100, "…" }}</p>
+      <p>{{ post.content | strip_html | truncate: 100, "…" }}</p>
       <div class="valign-wrapper" style="margin-top: 16px;">
         <i class="material-icons" style="color: #9e9e9e;">comment</i>&nbsp;
         <span class="disqus-comment-count" data-disqus-identifier="{{ post.id }}" data-disqus-url="{{ site.url }}{{ post.url }}">Comment</span>
