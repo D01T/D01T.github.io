@@ -5,7 +5,7 @@ author: Astro36
 category: Report
 tags: ['Programming', 'Github Pages', 'Jekyll', 'Material Design']
 image:
-  src: https://github.com/Astro36/Materialize-Jekyll/blob/master/assets/img/demo_index.png
+  src: https://raw.githubusercontent.com/Astro36/Materialize-Jekyll/master/assets/img/demo_index.png
   copyright: Astro36
 ccl: by-nc-nd
 ---
