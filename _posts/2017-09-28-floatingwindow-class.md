@@ -1,11 +1,11 @@
 ---
 title: "FloatingWindow Class"
 author: DarkTornado
-date: 2017-08-16 00:30
+date: 2017-09-28 00:30
 category: Report
 tags: ["Programming", "Android", "Java"]
 image:
-  src: https://raw.githubusercontent.com/DarkTornado/FloatingWindow/master/Example2.jpg
+  src: https://www.dropbox.com/s/ex353d3vl4dp1wc/FloatingWindowTitle.jpg?dl=1
   copyright: DarkTornado
 ---
 
