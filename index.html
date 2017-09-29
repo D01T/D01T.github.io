@@ -27,7 +27,7 @@ layout: default
   <div class="section">
     <div class="row">
       <div class="col s12">
-      {% for post in paginator.posts %}
+      {% for post in site.posts %}
         {% include post_card.html %}
       {% endfor %}
       </div>
