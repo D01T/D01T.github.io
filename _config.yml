@@ -9,7 +9,7 @@ paginate_path: "/page/:num/"
 collections:
   authors:
     output: true
-    permalink: /authors/:name/
+    permalink: /authors/:path/
 
 defaults:
   - scope:
