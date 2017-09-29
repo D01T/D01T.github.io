@@ -6,13 +6,22 @@ permalink: pretty
 paginate: 5
 paginate_path: "/page/:num/"
 
+collections:
+  authors:
+    output: true
+    permalink: /authors/:name/
+
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
 
 kramdown:
   input: GFM

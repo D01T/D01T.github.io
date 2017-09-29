@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+{% for member in site.data.members %}
+  {% if member.github == page.title %}
+    {% capture name %}{{ member.name }}{% endcapture %}
+    {% capture bio %}{{ member.bio }}{% endcapture %}
+    {% capture email %}{{ member.email }}{% endcapture %}
+    {% capture github %}{{ member.github }}{% endcapture %}
+    {% capture telegram %}{{ member.telegram }}{% endcapture %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<div class="container">
+  <div class="section">
+    <div class="row">
+      <div class="col s12">
+        <article>
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="https://github.com/{{ github }}.png" alt="Avatar" style="width: 128px; margin: 16px;">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <span class="card-title">{{ name }}</span>
+                <p>{{ bio }}</p>
+              </div>
+              <div class="card-action">
+                <a class="fa fa-envelope fa-2x fa-fw" aria-hidden="true" href="mailto:{{ email }}"></a>
+                <a class="fa fa-github fa-2x fa-fw" aria-hidden="true" href="https://github.com/{{ github }}"></a>
+                <a class="fa fa-telegram fa-2x fa-fw" aria-hidden="true" href="https://github.com/{{ github }}"></a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Posts</span>
+              <ul class="collection">
+                  {% for post in site.posts %}
+                    {% if post.author == github %}
+                    <li class="collection-item">
+                      <strong><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time> | {{ site.data.members | where: "github", post.author | first | first | last }}</strong><br>
+                      <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                    </li>
+                    {% endif %}
+                  {% endfor %}
+                  </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>

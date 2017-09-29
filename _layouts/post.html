@@ -33,7 +33,7 @@ layout: default
               <div class="divider" style="margin: 16px 0;"></div>
               <div class="chip">
                 <img src="https://github.com/{{ page.author }}.png" alt="Avatar">
-                <a href="https://github.com/{{ page.author }}" style="color: rgba(0,0,0,0.6);">{{ site.data.members | where: "github", page.author | first | first | last }}</a>
+                <a href="{{ site.url }}/authors/{{ page.author }}" style="color: rgba(0,0,0,0.6);">{{ site.data.members | where: "github", page.author | first | first | last }}</a>
               </div>
               {% for tag in page.tags %}
                 <div class="chip">{{ tag }}</div>
