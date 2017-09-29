@@ -1,2 +1,3 @@
 ---
+title: Astro36
 ---
