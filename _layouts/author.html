@@ -8,7 +8,7 @@ layout: default
     {% capture bio %}{{ member.bio }}{% endcapture %}
     {% capture email %}{{ member.email }}{% endcapture %}
     {% capture github %}{{ member.github }}{% endcapture %}
-    {% capture telegram %}{{ member.telegram.sub('@', '') }}{% endcapture %}
+    {% capture telegram %}{{ member.telegram | remove_first: "@" }}{% endcapture %}
     {% break %}
   {% endif %}
 {% endfor %}
