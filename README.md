@@ -6,7 +6,7 @@
 
 ## License
 
-[Materialize-Jekyll](http://astro36.me/Materialize-Jekyll/) is licensed under the [MIT License](https://github.com/Astro36/Materialize-Jekyll/blob/master/LICENSE) by Astro36.
+[Materialize-Jekyll](http://astro36.me/Materialize-Jekyll/) is licensed under a [MIT License](https://github.com/Astro36/Materialize-Jekyll/blob/master/LICENSE) by Astro36.
 
 [Materialize](http://materializecss.com/) is licensed under a [MIT License](https://github.com/Dogfalo/materialize/blob/master/LICENSE) by Dogfalo.
 
