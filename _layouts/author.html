@@ -2,13 +2,13 @@
 layout: default
 ---
 
-{% for authors in site.data.author %}
-  {% if authors.github == page.title %}
-    {% capture name %}{{ authors.name }}{% endcapture %}
-    {% capture bio %}{{ authors.bio }}{% endcapture %}
-    {% capture email %}{{ authors.email }}{% endcapture %}
-    {% capture github %}{{ authors.github }}{% endcapture %}
-    {% capture telegram %}{{ authors.telegram }}{% endcapture %}
+{% for member in site.data.members %}
+  {% if member.github == page.title %}
+    {% capture name %}{{ member.name }}{% endcapture %}
+    {% capture bio %}{{ member.bio }}{% endcapture %}
+    {% capture email %}{{ member.email }}{% endcapture %}
+    {% capture github %}{{ member.github }}{% endcapture %}
+    {% capture telegram %}{{ member.telegram }}{% endcapture %}
     {% break %}
   {% endif %}
 {% endfor %}
@@ -41,9 +41,9 @@ layout: default
               <span class="card-title">Posts</span>
               <ul class="collection">
                   {% for post in site.posts %}
-                    {% if post.author == github %}
+                    {% if post.members == github %}
                     <li class="collection-item">
-                      <strong><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time> | {{ site.data.members | where: "github", post.author | first | first | last }}</strong><br>
+                      <strong><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time> | {{ site.data.members | where: "github", post.members | first | first | last }}</strong><br>
                       <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
                     </li>
                     {% endif %}
