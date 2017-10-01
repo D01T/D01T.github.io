@@ -1,5 +1,5 @@
 ---
-title: "Re:Notepad"
+title: "Re:Notepad 5.3Beta"
 author: NenkaLab
 date: 2017-09-28 23:30
 category: Report
@@ -8,8 +8,6 @@ image:
   src: https://www.dropbox.com/s/sbxvutl3mg0ue1d/BlockLauncher%20Pro_2017-09-28-23-41-50.png?dl=1
   copyright: NenkaLab
 ---
-
-닉네임 에러?
 
 제가만든 마인크래프트(포켓에디션) 블럭런쳐(?)로 만든 잡 메모장 스크립트 입니다.<br>
 
