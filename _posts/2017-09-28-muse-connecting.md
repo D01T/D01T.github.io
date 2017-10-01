@@ -3,7 +3,7 @@ title: "Muse Headband 연동"
 author: Scripter36
 date: 2017-09-28 20:55
 category: Report
-tags: ["Programming", "UWP", "Muse"]
+tags: ["Programming", "UWP", "C++", "Javascript", "Muse"]
 ---
 
 뇌파와 기타 여러가지를 측정할 수 있는 [Muse Headband](http://www.choosemuse.com/)를 UWP(Universal Windows Platform)을 통해 연결하고, 브라우저로 넘겨 웹에서 사용할 수 있도록 하는 과정을 소개합니다.
