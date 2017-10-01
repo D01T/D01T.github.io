@@ -6,7 +6,7 @@ category: Report
 tags: ["Programming", "C", "Calculator"]
 copyright: Delighit Lab
 ---
-```
+```+C
 #include <stdio.h>
 
 int main() { 
