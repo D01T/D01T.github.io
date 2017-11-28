@@ -1,11 +1,11 @@
 ---
 title: "C언어 도형계산기"
-author: FourSeason
+author: 4season
 date: 2017-11-28 22:33
 category: Report
 tags: ["Programming", "C", "FigureCalculator"]
 image:
-  src: https://drive.google.com/open?id=1JOsVzAtfQib3Zu0thFMkGBvfoIeTF6bR
+  src: https://www.dropbox.com/s/ax3yvrxe2ppd7o2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%2827%29.png?dl=1
   copyright: Delighit Lab
 ---
  ```c
@@ -32,7 +32,7 @@ int main() {
 		scanf_s("%f", &a, 1);
 		printf("높이입력 : ");
 		scanf_s("%f", &b, 1);
-		printf("삼각형릐 면적 = %.2f\n", a * b / 2);
+		printf("삼각형의 면적 = %.2f\n", a * b / 2);
 		break;
 	case 3:
 		printf("3. 사각형을 선택하셨습니다.\n");
@@ -50,7 +50,7 @@ int main() {
 C언어로 만든 `도형` 계산기 입니다. <br>
 기능은 `원, 삼각형, 사각형` 이 있습니다. <br>
 
-<img scr="https://drive.google.com/open?id=18b4s2Mywj9StUcyDPIeU_nCd7lzAostM" width="70%"> <br>
-<img src="https://drive.google.com/open?id=1JOsVzAtfQib3Zu0thFMkGBvfoIeTF6bR" width="70%"> <br>
+<img scr="https://www.dropbox.com/s/tqjubsvdavb409z/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%2826%29.png?dl=1" width="70%"> <br>
+<img src="https://www.dropbox.com/s/ax3yvrxe2ppd7o2/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%2827%29.png?dl=1" width="70%"> <br>
 
 한글이 깨저버린건 정말로 기분탓이지만, 소스에 적힌대로 질문하는 것이니 당황하시지말구 한번 계산해보세요!
