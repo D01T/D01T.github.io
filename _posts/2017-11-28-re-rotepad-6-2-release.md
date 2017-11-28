@@ -38,4 +38,4 @@ VideoPlayer의 자막이 수정되었습니다
 Naver Blog   [Link](https://blog.naver.com/PostView.nhn?blogId=nenka&logNo=221098904075&navType=tl&proxyReferer=http%3A%2F%2Fm.blog.naver.com%2FPostList.nhn%3FblogId%3Dnenka%26currentPage%3D1)
 
 ##### Test
-<img src="{{ url }}">
+<img src="https://blog.naver.com/PostView.nhn?blogId=nenka&logNo=221098904075&navType=tl&proxyReferer=http%3A%2F%2Fm.blog.naver.com%2FPostList.nhn%3FblogId%3Dnenka%26currentPage%3D1">
