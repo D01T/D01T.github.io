@@ -1,13 +1,13 @@
- ---
- title: "C언어 도형계산기"
- author: FourSeason
- date: 2017-11-28 22:33
- category: Report
- tags: ["Programming", "C", "FigureCalculator"]
- image:
-   src: https://drive.google.com/open?id=1JOsVzAtfQib3Zu0thFMkGBvfoIeTF6bR
-   copyright: Delighit Lab
- ---
+---
+title: "C언어 도형계산기"
+author: FourSeason
+date: 2017-11-28 22:33
+category: Report
+tags: ["Programming", "C", "FigureCalculator"]
+image:
+  src: https://drive.google.com/open?id=1JOsVzAtfQib3Zu0thFMkGBvfoIeTF6bR
+  copyright: Delighit Lab
+---
  ```c
 #include <stdio.h>
 
