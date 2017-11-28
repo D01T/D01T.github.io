@@ -2,7 +2,7 @@
   <div class="card">
     {% if post.image.src %}
     <div class="card-image">
-      <img class="materialboxed" data-caption="© {{ post.image.copyright }}" src="{{ post.image.src }}">
+      <img class="materialboxed" data-caption="© {{ post.image.copyright }}" src="{{ post.image.src }}" onerror="this.src='https://d01t.github.io/assets/img/noimage.png'">
       <span class="card-title" style="background: rgba(0,0,0,0.2); width: 100%;">
         {{ post.title }}
       </span>
