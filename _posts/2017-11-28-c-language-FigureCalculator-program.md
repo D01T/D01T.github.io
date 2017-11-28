@@ -5,8 +5,8 @@
  category: Report
  tags: ["Programming", "C", "FigureCalculator"]
  image:
- src: https://drive.google.com/open?id=1JOsVzAtfQib3Zu0thFMkGBvfoIeTF6bR
- copyright: Delighit Lab
+   src: https://drive.google.com/open?id=1JOsVzAtfQib3Zu0thFMkGBvfoIeTF6bR
+   copyright: Delighit Lab
  ---
  ```c
 #include <stdio.h>
