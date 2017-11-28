@@ -8,7 +8,7 @@ image:
   src: https://www.dropbox.com/s/sbxvutl3mg0ue1d/BlockLauncher%20Pro_2017-09-28-23-41-50.png?dl=1
   copyright: NenkaLab
 ---
-<pre>
+```
 /*으아 힘들어요....*/
 VideoPlayer의 자막이 수정되었습니다
 
@@ -29,8 +29,8 @@ VideoPlayer의 자막이 수정되었습니다
 자막시간 : 00:03:00
 넘긴시간 : 00:03:01
  = 자막 안뜸
- </pre>
- <style>.gogogogogo {font-size: 200x;text-size: 20px;display: inline-block;width: 100%;height: auto;border: 1px solid black;border-radius: 1px;padding: 10px 18px 10px 16px;}</style>
+ ```
+ <style>.gogogogogo {font-size: 200x;text-size: 20px;display: inline-block;width: 100%;height: auto;border: 1px solid black;border-radius: 1px;padding: 10px 18px 10px 16px;@export waves-effect; @export waves-dark;}</style>
  <a class="gogogogogo" href="https://m.blog.naver.com/nenka/221150820463">Re:NotePad 6.2</a>
 
 ##### Links
