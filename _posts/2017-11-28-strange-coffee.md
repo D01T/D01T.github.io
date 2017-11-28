@@ -9,7 +9,7 @@ image:
   copyright: DarkTornado
 ---
 
-예전에 마약 한 사발(?)을 하고 만들다가 던졌는데, 갑자기 삘이 와서 <s>대강</s> 완성히켜서 실적으로 냅니다.
+예전에 마약 한 사발(?)을 하고 만들다가 던졌는데, 갑자기 삘이 와서 <s>대강</s> 완성시켜서 실적으로 냅니다.
 
 일단, 커피 원두는 나뭇잎을 캐시면 1/3 확률로 드롭됩니다.
 <img src="https://www.dropbox.com/s/bubdzrdkbxobu55/Coffee1.jpg?dl=1" width="80%">
