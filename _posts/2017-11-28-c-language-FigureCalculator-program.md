@@ -32,7 +32,7 @@ int main() {
 		scanf_s("%f", &a, 1);
 		printf("높이입력 : ");
 		scanf_s("%f", &b, 1);
-		printf("삼각형릐 면적 = %.2f\n", a * b / 2);
+		printf("삼각형의 면적 = %.2f\n", a * b / 2);
 		break;
 	case 3:
 		printf("3. 사각형을 선택하셨습니다.\n");
