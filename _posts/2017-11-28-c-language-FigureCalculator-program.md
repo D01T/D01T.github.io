@@ -1,6 +1,6 @@
 ---
 title: "C언어 도형계산기"
-author: FourSeason
+author: 4season
 date: 2017-11-28 22:33
 category: Report
 tags: ["Programming", "C", "FigureCalculator"]
