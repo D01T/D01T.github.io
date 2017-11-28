@@ -20,7 +20,8 @@ layout: default
               {% endunless %}
               <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ post.date }}">{{ page.date | date_to_string }}</time> | <a href="{{ site.url }}{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.id }}">Comment</a></p>
               <div id="post-content">
-                {{ content | replace: "<img", "<img onerror=/this.src='https://d01t.github.io/assets/img/noimage.png'/ class='materialboxed'" }}
+                {% capture noimageerror %}this.src="https://d01t.github.io/assets/img/noimage.png"{% endcapture %}
+                {{ content | replace: "<img", "<img onerror='{{ noimageerror }}' class='materialboxed'" }}
               </div>
               {% if page.ccl %}
               <div class="center" style="margin-top: 16px;">
