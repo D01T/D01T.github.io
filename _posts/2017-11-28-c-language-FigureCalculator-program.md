@@ -50,7 +50,7 @@ int main() {
 C언어로 만든 `도형` 계산기 입니다. <br>
 기능은 `원, 삼각형, 사각형` 이 있습니다. <br>
 
-<img scr="https://drive.google.com/open?id=18b4s2Mywj9StUcyDPIeU_nCd7lzAostM"> <br>
-<img src="https://drive.google.com/open?id=1JOsVzAtfQib3Zu0thFMkGBvfoIeTF6bR"> <br>
+<img scr="https://drive.google.com/open?id=18b4s2Mywj9StUcyDPIeU_nCd7lzAostM" width="70%"> <br>
+<img src="https://drive.google.com/open?id=1JOsVzAtfQib3Zu0thFMkGBvfoIeTF6bR" width="70%"> <br>
 
 한글이 깨저버린건 정말로 기분탓이지만, 소스에 적힌대로 질문하는 것이니 당황하시지말구 한번 계산해보세요!
